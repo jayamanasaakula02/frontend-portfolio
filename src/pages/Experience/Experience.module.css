@@ -1,0 +1,121 @@
+.section {
+    padding: 2rem 0;
+}
+
+.experienceContainer {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto 0;
+    padding-left: 3rem;
+}
+
+.verticalLine {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent-primary), transparent);
+    opacity: 0.3;
+}
+
+.experienceCard {
+    position: relative;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
+    transition: var(--transition);
+}
+
+.experienceCard:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(139, 92, 246, 0.1);
+}
+
+.marker {
+    position: absolute;
+    left: -48px;
+    /* Perfectly aligned with the line */
+    top: 40px;
+    width: 14px;
+    height: 14px;
+    background-color: #080710;
+    border: 3px solid var(--accent-primary);
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px var(--accent-primary);
+}
+
+.cardHeader {
+    margin-bottom: 1.5rem;
+}
+
+.duration {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+    color: var(--text-primary);
+}
+
+.company {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.responsibilities {
+    list-style: none;
+    padding-left: 0;
+}
+
+.responsibilities li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.responsibilities li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-primary);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .experienceContainer {
+        padding-left: 2rem;
+    }
+
+    .marker {
+        left: -32px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .experienceCard {
+        padding: 1.8rem;
+    }
+
+    .role {
+        font-size: 1.5rem;
+    }
+}

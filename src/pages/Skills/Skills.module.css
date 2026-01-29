@@ -1,0 +1,52 @@
+.skillsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.skillsSection h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.skillsSection p {
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.skillList {
+    margin-bottom: 2rem;
+}
+
+.toolsSection {
+    margin-top: 3rem;
+}
+
+.toolsSection h4 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.toolsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.toolTag {
+    background-color: var(--bg-secondary);
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    cursor: default;
+}
+
+@media (max-width: 992px) {
+    .skillsContainer {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

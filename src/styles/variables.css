@@ -1,0 +1,78 @@
+:root {
+    /* Premium Slate & Violet Light Mode */
+    --bg-primary: #fcfcfd;
+    --bg-secondary: #f4f4f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-primary: #8b5cf6;
+    /* Modern Violet */
+    --accent-secondary: #7c3aed;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --nav-bg: rgba(252, 252, 253, 0.9);
+    --shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.1);
+    --footer-bg: #f8fafc;
+
+    /* Shared */
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --container-width: 1200px;
+    --header-height: 80px;
+}
+
+[data-theme='dark'] {
+    /* Futuristic Nebula Pallet */
+    --bg-primary: #080710;
+    /* Deep Midnight */
+    --bg-secondary: #0f0e1c;
+    --text-primary: #fdfcff;
+    --text-secondary: #a1a1aa;
+    --accent-primary: #c026d3;
+    /* Electric Violet */
+    --accent-secondary: #9333ea;
+    --card-bg: #131224;
+    --border-color: #22213a;
+    --nav-bg: rgba(8, 7, 16, 0.9);
+    --shadow: 0 4px 15px rgba(192, 38, 211, 0.2);
+    --footer-bg: #080710;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: inherit;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 6rem 0;
+}
