@@ -61,10 +61,11 @@
 }
 
 .socialIcons a {
-    width: 45px;
-    height: 45px;
-    background-color: var(--text-primary);
-    color: var(--bg-primary);
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.03);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -74,8 +75,10 @@
 
 .socialIcons a:hover {
     background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
     color: white;
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(192, 38, 211, 0.3);
 }
 
 .formSide {
