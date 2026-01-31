@@ -47,17 +47,17 @@ const Navbar = () => {
                         </li>
                     ))}
                     <button onClick={toggleTheme} className={styles.themeToggle}>
-                        {theme === 'light' ? <Moon size={20} strokeWidth={1.5} /> : <Sun size={20} strokeWidth={1.5} />}
+                        {theme === 'light' ? <Moon size={20} strokeWidth={1} /> : <Sun size={20} strokeWidth={1} />}
                     </button>
                 </ul>
 
                 {/* Mobile Nav Toggle */}
                 <div className={styles.mobileActions}>
                     <button onClick={toggleTheme} className={styles.mobileThemeToggle}>
-                        {theme === 'light' ? <Moon size={20} strokeWidth={1.5} /> : <Sun size={20} strokeWidth={1.5} />}
+                        {theme === 'light' ? <Moon size={20} strokeWidth={1} /> : <Sun size={20} strokeWidth={1} />}
                     </button>
                     <button className={styles.menuToggle} onClick={() => setIsOpen(!isOpen)}>
-                        {isOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
+                        {isOpen ? <X size={24} strokeWidth={1} /> : <Menu size={24} strokeWidth={1} />}
                     </button>
                 </div>
             </div>

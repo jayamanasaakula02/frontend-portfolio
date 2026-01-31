@@ -34,7 +34,7 @@ const ProjectCard = ({ project }) => {
                     {project.technologies.length > 3 && <span className={styles.more}>+{project.technologies.length - 3}</span>}
                 </div>
                 <div className={styles.actions}>
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"><ExternalLink size={18} /> Visit Website</a>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"><ExternalLink size={18} strokeWidth={1} /> Visit Website</a>
                 </div>
             </div>
         </motion.div>

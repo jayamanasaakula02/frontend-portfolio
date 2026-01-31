@@ -26,9 +26,9 @@ const Footer = () => {
                 <div className={styles.socials}>
                     <h4>Connect</h4>
                     <div className={styles.socialIcons}>
-                        <a href="https://github.com/jayamanasaakula02" target="_blank" rel="noopener noreferrer"><Github size={20} strokeWidth={1.5} /></a>
-                        <a href="https://www.linkedin.com/in/jaya-manasa-akula-5607b437b/" target="_blank" rel="noopener noreferrer"><Linkedin size={20} strokeWidth={1.5} /></a>
-                        <a href="mailto:jayamanasa.akula02@gmail.com"><Mail size={20} strokeWidth={1.5} /></a>
+                        <a href="https://github.com/jayamanasaakula02" target="_blank" rel="noopener noreferrer"><Github size={20} strokeWidth={1} /></a>
+                        <a href="https://www.linkedin.com/in/jaya-manasa-akula-5607b437b/" target="_blank" rel="noopener noreferrer"><Linkedin size={20} strokeWidth={1} /></a>
+                        <a href="mailto:jayamanasa.akula02@gmail.com"><Mail size={20} strokeWidth={1} /></a>
                     </div>
                 </div>
             </div>

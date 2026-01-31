@@ -97,7 +97,7 @@ const ProjectDetail = () => {
         >
             <div className={`container ${styles.detailContainer}`}>
                 <Link to="/" className={styles.backBtn}>
-                    <ArrowLeft size={18} /> Back to Home
+                    <ArrowLeft size={18} strokeWidth={1} /> Back to Home
                 </Link>
 
                 <div className={styles.grid}>
@@ -136,7 +136,7 @@ const ProjectDetail = () => {
                                 <h3>Key Features</h3>
                                 {project.features.map((feature, index) => (
                                     <div key={index} className={styles.featureItem}>
-                                        <CheckCircle size={16} className={styles.icon} />
+                                        <CheckCircle size={16} strokeWidth={1} className={styles.icon} />
                                         <span>{feature}</span>
                                     </div>
                                 ))}
@@ -153,7 +153,7 @@ const ProjectDetail = () => {
 
                             <div className={styles.actions}>
                                 <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.liveBtn}>
-                                    <Globe size={18} /> Visit Website
+                                    <Globe size={18} strokeWidth={1} /> Visit Website
                                 </a>
                             </div>
                         </motion.div>
