@@ -58,14 +58,14 @@ const Contact = () => {
 
                         <div className={styles.contactMethods}>
                             <div className={styles.method}>
-                                <div className={styles.iconBox}><Mail size={24} /></div>
+                                <div className={styles.iconBox}><Mail size={24} strokeWidth={1.5} /></div>
                                 <div>
                                     <h4>Email</h4>
                                     <p>jayamanasa.akula02@gmail.com</p>
                                 </div>
                             </div>
                             <div className={styles.method}>
-                                <div className={styles.iconBox}><MapPin size={24} /></div>
+                                <div className={styles.iconBox}><MapPin size={24} strokeWidth={1.5} /></div>
                                 <div>
                                     <h4>Location</h4>
                                     <p>Hyderabad, Telangana, India</p>
@@ -76,8 +76,8 @@ const Contact = () => {
                         <div className={styles.socials}>
                             <h4>Follow Me</h4>
                             <div className={styles.socialIcons}>
-                                <a href="https://github.com/jayamanasaakula02" target="_blank" rel="noopener noreferrer"><Github size={24} /></a>
-                                <a href="https://www.linkedin.com/in/jaya-manasa-akula-5607b437b/" target="_blank" rel="noopener noreferrer"><Linkedin size={24} /></a>
+                                <a href="https://github.com/jayamanasaakula02" target="_blank" rel="noopener noreferrer"><Github size={24} strokeWidth={1.5} /></a>
+                                <a href="https://www.linkedin.com/in/jaya-manasa-akula-5607b437b/" target="_blank" rel="noopener noreferrer"><Linkedin size={24} strokeWidth={1.5} /></a>
                             </div>
                         </div>
                     </div>
@@ -133,7 +133,7 @@ const Contact = () => {
                                 ></textarea>
                             </div>
                             <button type="submit" className={styles.submitBtn}>
-                                Send Message <Send size={18} />
+                                Send Message <Send size={18} strokeWidth={1.5} />
                             </button>
                         </form>
                     </div>
