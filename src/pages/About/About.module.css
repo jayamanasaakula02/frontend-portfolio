@@ -157,4 +157,8 @@
     .statsCard {
         flex-direction: column;
     }
+
+    .strengths ul {
+        grid-template-columns: 1fr;
+    }
 }
