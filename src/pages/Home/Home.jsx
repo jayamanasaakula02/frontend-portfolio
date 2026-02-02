@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import profileImg from '../../assets/no-bg-portrait.png';
+import profileImg from '../../assets/manasa-portrait-new.png';
 import styles from './Home.module.css';
 import About from '../About/About';
 import Skills from '../Skills/Skills';

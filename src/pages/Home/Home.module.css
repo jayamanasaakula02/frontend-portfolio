@@ -37,13 +37,13 @@
     width: auto;
     object-fit: contain;
     object-position: right bottom;
-    opacity: 0.6;
-    /* Balanced for clarity and shade */
-    /* Start fading earlier from the left to clear the text space completely */
-    mask-image: linear-gradient(to right, transparent 0%, transparent 20%, black 60%),
-        linear-gradient(to top, transparent 0%, black 15%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 20%, black 60%),
-        linear-gradient(to top, transparent 0%, black 15%);
+    opacity: 1;
+    /* Increased for the high-quality AI portrait */
+    /* Refined mask to blend the studio background into the page's black hero section */
+    mask-image: linear-gradient(to right, transparent 0%, transparent 10%, black 50%),
+        linear-gradient(to top, transparent 0%, black 10%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 10%, black 50%),
+        linear-gradient(to top, transparent 0%, black 10%);
 }
 
 .blackShade {
