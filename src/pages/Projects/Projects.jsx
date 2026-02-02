@@ -7,7 +7,7 @@ import styles from './Projects.module.css';
 // Import project images
 import gmaHero from '../../assets/gma-hero.png';
 import swaraaleeHero from '../../assets/swaraalee-hero.png';
-import edumetricxHero from '../../assets/edumetricx-hero.png';
+import romaaHero from '../../assets/romaa-hero.png';
 
 const projectsData = [
     {
@@ -31,13 +31,13 @@ const projectsData = [
         githubUrl: '#'
     },
     {
-        id: 'edumetricx-software',
-        title: 'Edumetricx Software',
-        shortDesc: 'Complete automation software for Educational Institutions to manage enquiries, payments, and more.',
-        technologies: ['React JS', 'Chart.js', 'MySQL', 'REST APIs', 'Data Visualization'],
-        color: '#2dd4bf', // Teal based on the image
-        image: edumetricxHero,
-        liveUrl: 'https://www.edumetricx.com/',
+        id: 'romaa-clinic',
+        title: 'Romaa Hair & Skin Clinic',
+        shortDesc: 'A comprehensive hair and skin care platform with advanced treatment catalogs and appointment systems.',
+        technologies: ['React JS', 'Framer Motion', 'CSS Modules', 'WhatsApp API', 'Responsive Design'],
+        color: '#14b8a6', // Teal/Cyan color from the site's theme
+        image: romaaHero,
+        liveUrl: 'https://www.romaahairandskincare.com/',
         githubUrl: '#'
     }
 ];

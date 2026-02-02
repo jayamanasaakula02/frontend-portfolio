@@ -7,7 +7,7 @@ import styles from './ProjectDetail.module.css';
 // Import project images for consistency
 import gmaHero from '../../assets/gma-hero.png';
 import swaraaleeHero from '../../assets/swaraalee-hero.png';
-import edumetricxHero from '../../assets/edumetricx-hero.png';
+import romaaHero from '../../assets/romaa-hero.png';
 
 // Full project details mapping
 const projectDetails = {
@@ -43,20 +43,20 @@ const projectDetails = {
         liveUrl: 'https://swaraaleemusic.com/',
         githubUrl: '#'
     },
-    'edumetricx-software': {
-        title: 'Edumetricx Software',
-        overview: 'Edumetricx is a specialized automation software designed for Educational Institutions. It streamlines complex administrative tasks such as enquiry management, payment tracking, and automated reminders, allowing institutions to focus more on education and less on paperwork.',
+    'romaa-clinic': {
+        title: 'Romaa Hair & Skin Clinic',
+        overview: 'Romaa Hair & Skin Clinic is a leading medical aesthetics center specializing in advanced hair restoration and dermatological treatments. The platform showcased their expertise in Hair Transplantation, PRP therapies, and skin rejuvenation treatments like Hydra Facials and Laser Toning, providing a professional digital presence for patients across Telangana and Andhra Pradesh.',
         features: [
-            'Automated Enquiry Follow-up system to increase admissions',
-            'Smart Payment Reminders and fee management modules',
-            'Real-time Data Visualization and administrative dashboards',
-            'Institution-wide Automation for various administrative roles',
-            'Highly responsive web and mobile-friendly application'
+            'Advanced Treatment Catalog for Hair and Skin services',
+            'Before & After Transformation gallery for patient results',
+            'Integrated WhatsApp consultation and appointment system',
+            'E-commerce integration for specialized beauty and care products',
+            'Highly responsive and SEO-optimized healthcare portal'
         ],
-        technologies: ['React JS', 'Chart.js', 'MySQL', 'Node.js', 'REST APIs', 'Custom CSS'],
-        color: '#2dd4bf',
-        image: edumetricxHero,
-        liveUrl: 'https://www.edumetricx.com/',
+        technologies: ['React JS', 'Framer Motion', 'CSS Modules', 'Lucide Icons', 'Responsive UI', 'WhatsApp API'],
+        color: '#14b8a6',
+        image: romaaHero,
+        liveUrl: 'https://www.romaahairandskincare.com/',
         githubUrl: '#'
     }
 };
