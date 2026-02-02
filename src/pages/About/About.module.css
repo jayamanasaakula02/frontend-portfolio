@@ -170,6 +170,10 @@
         gap: 3rem;
     }
 
+    .imageSide {
+        order: -2;
+    }
+
     .visualSide {
         order: -1;
     }
