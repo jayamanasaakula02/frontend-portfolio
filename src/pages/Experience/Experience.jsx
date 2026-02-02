@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../../components/SectionHeading/SectionHeading';
 import styles from './Experience.module.css';

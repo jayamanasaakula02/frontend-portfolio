@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ExternalLink, CheckCircle, Globe } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Globe } from 'lucide-react';
 import styles from './ProjectDetail.module.css';
 
 // Import project images for consistency
@@ -81,7 +81,7 @@ const ProjectDetail = () => {
                     className="container"
                 >
                     <h2>Project Not Found</h2>
-                    <p>We couldn't find the project you're looking for.</p>
+                    <p>We couldn&apos;t find the project you&apos;re looking for.</p>
                     <Link to="/" className={styles.backHomeBtn}>Back to Home</Link>
                 </motion.div>
             </div>

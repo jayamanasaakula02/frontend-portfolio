@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Send } from 'lucide-react';
 import SectionHeading from '../../components/SectionHeading/SectionHeading';
 import styles from './Contact.module.css';
 
@@ -53,8 +53,8 @@ const Contact = () => {
 
                 <div className={styles.contactContainer}>
                     <div className={styles.infoSide}>
-                        <h3>Let's talk about your project</h3>
-                        <p>I'm currently available for freelance work or full-time opportunities. If you have a question or just want to say hi, feel free to reach out!</p>
+                        <h3>Let&apos;s talk about your project</h3>
+                        <p>I&apos;m currently available for freelance work or full-time opportunities. If you have a question or just want to say hi, feel free to reach out!</p>
 
                         <div className={styles.contactMethods}>
                             <div className={styles.method}>

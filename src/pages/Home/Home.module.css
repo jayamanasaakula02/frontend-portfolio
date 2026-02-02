@@ -15,46 +15,105 @@
     min-height: calc(100vh - var(--header-height));
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #000000;
     overflow: hidden;
+    padding: 2rem 0;
 }
 
-.heroBgImage {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 55%;
-    /* Reduced width to prevent overlap */
-    height: 100%;
+.heroVisual {
+    position: relative;
+    /* Change to relative for better flow in centered layout */
     z-index: 1;
-    pointer-events: none;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    /* Space between photo and text */
+    flex: 1;
 }
 
-.bgPortrait {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    object-position: right bottom;
-    opacity: 0.6;
-    /* Balanced for clarity and shade */
-    /* Start fading earlier from the left to clear the text space completely */
-    mask-image: linear-gradient(to right, transparent 0%, transparent 20%, black 60%),
-        linear-gradient(to top, transparent 0%, black 15%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 20%, black 60%),
-        linear-gradient(to top, transparent 0%, black 15%);
+.imageCircleWrapper {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: floatingHero 6s infinite ease-in-out;
 }
 
-.blackShade {
+@keyframes floatingHero {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-15px) rotate(1deg);
+    }
+
+    75% {
+        transform: translateY(10px) rotate(-1deg);
+    }
+}
+
+.radiumCircle {
     position: absolute;
-    top: 0;
-    right: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.4) 0%, transparent 40%);
-    pointer-events: none;
+    border-radius: 50%;
+    border: 3px solid var(--accent-primary);
+    box-shadow:
+        0 0 20px var(--accent-primary),
+        0 0 40px var(--accent-secondary),
+        inset 0 0 20px var(--accent-primary);
+    animation: radiumPulse 4s infinite alternate ease-in-out, rotateRing 20s infinite linear;
+}
+
+@keyframes rotateRing {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes radiumPulse {
+    0% {
+        box-shadow: 0 0 15px var(--accent-primary), 0 0 30px var(--accent-secondary), inset 0 0 10px var(--accent-primary);
+        transform: scale(1);
+        border-color: var(--accent-primary);
+    }
+
+    100% {
+        box-shadow: 0 0 40px var(--accent-primary), 0 0 80px var(--accent-secondary), inset 0 0 30px var(--accent-primary);
+        transform: scale(1.05);
+        border-color: var(--accent-secondary);
+    }
+}
+
+.imageInner {
+    width: 92%;
+    height: 92%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
     z-index: 2;
+    background: radial-gradient(circle at center, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+}
+
+.heroPortrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    /* Soft merge effect */
+    mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
 }
 
 /* Background handled by .heroBgImage */
@@ -63,10 +122,13 @@
     position: relative;
     z-index: 5;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     margin: 0 auto;
     padding: 0 1.5rem;
+    gap: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -89,9 +151,9 @@
 
 
 .heroContent {
-    flex: 1;
-    max-width: 550px;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+    flex: 1.2;
+    max-width: 650px;
+    text-align: left;
 }
 
 .greeting {
@@ -123,13 +185,14 @@
 .description {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    max-width: 600px;
-    margin-bottom: 2.5rem;
+    max-width: 100%;
+    margin: 0 0 2.5rem;
 }
 
 .ctas {
     display: flex;
     gap: 1.5rem;
+    justify-content: flex-start;
 }
 
 .primaryBtn {
@@ -166,6 +229,37 @@
 }
 
 /* Background image sections handled by .heroBgImage and .bgPortrait */
+.heroGlow {
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle, var(--accent-primary) 0%, var(--accent-secondary) 40%, transparent 70%);
+    filter: blur(100px);
+    opacity: 0.25;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: breatheGlow 8s infinite alternate ease-in-out;
+}
+
+@keyframes breatheGlow {
+    0% {
+        opacity: 0.15;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0.35;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+:global([data-theme='dark']) .heroGlow {
+    opacity: 0.4;
+    filter: blur(60px);
+}
 
 /* Clean single aura glow */
 .imageBg::before {
@@ -303,8 +397,18 @@
         padding: 5rem 0;
     }
 
-    .heroBgImage {
-        display: none;
+    .heroVisual {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: none;
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .imageCircleWrapper {
+        width: 320px;
+        height: 320px;
     }
 
     .heroContainer {

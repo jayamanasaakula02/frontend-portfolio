@@ -1,7 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import profileImg from '../../assets/no-bg-portrait.png';
+import profileImg from '../../assets/manasa-portrait-new.png';
 import styles from './Home.module.css';
 import About from '../About/About';
 import Skills from '../Skills/Skills';
@@ -18,29 +17,18 @@ const Home = () => {
 
             {/* Hero Section */}
             <section id="home" className={styles.hero}>
-                {/* Background Full Portrait Merging into Black */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1.2 }}
-                    className={styles.heroBgImage}
-                >
-                    <img src={profileImg} alt="" className={styles.bgPortrait} />
-                    <div className={styles.blackShade}></div>
-                </motion.div>
-
                 <div className={`container ${styles.heroContainer}`}>
                     <div className={styles.heroContent}>
                         <motion.p
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
                             className={styles.greeting}
                         >
-                            Hello, I'm
+                            Hello, I&apos;m
                         </motion.p>
                         <motion.h1
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className={styles.name}
@@ -48,7 +36,7 @@ const Home = () => {
                             Jaya Manasa Akula
                         </motion.h1>
                         <motion.h2
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.4 }}
                             className={styles.role}
@@ -56,7 +44,7 @@ const Home = () => {
                             Professional <span>Frontend Developer</span>
                         </motion.h2>
                         <motion.p
-                            initial={{ opacity: 0, x: -20 }}
+                            initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5, delay: 0.6 }}
                             className={styles.description}
@@ -77,6 +65,21 @@ const Home = () => {
                             </a>
                         </motion.div>
                     </div>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8, x: 30 }}
+                        animate={{ opacity: 1, scale: 1, x: 0 }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        className={styles.heroVisual}
+                    >
+                        <div className={styles.imageCircleWrapper}>
+                            <div className={styles.radiumCircle}></div>
+                            <div className={styles.imageInner}>
+                                <img src={profileImg} alt="Jaya Manasa Akula" className={styles.heroPortrait} />
+                            </div>
+                            <div className={styles.heroGlow}></div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -107,6 +110,7 @@ const Home = () => {
             <section id="projects" className={styles.pageSection}>
                 <Projects />
             </section>
+
 
             <SectionDivider width="100%" opacity={0.15} />
 

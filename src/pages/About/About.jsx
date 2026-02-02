@@ -1,7 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../../components/SectionHeading/SectionHeading';
-import portraitImg from '../../assets/manasa-portrait-new.png';
 import styles from './About.module.css';
 
 const About = () => {
@@ -89,11 +87,6 @@ const About = () => {
                     </motion.div>
                 </motion.div>
 
-                <motion.div className={styles.imageSide} variants={itemVariants}>
-                    <div className={styles.imageWrapper}>
-                        <img src={portraitImg} alt="Jaya Manasa Akula" className={styles.profilePortrait} />
-                    </div>
-                </motion.div>
 
                 <motion.div className={styles.visualSide} variants={itemVariants}>
                     <div className={styles.statsCard}>

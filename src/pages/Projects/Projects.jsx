@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../../components/SectionHeading/SectionHeading';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
@@ -83,4 +82,3 @@ const Projects = () => {
 };
 
 export default Projects;
-export { projectsData };
